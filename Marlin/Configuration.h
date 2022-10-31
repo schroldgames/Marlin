@@ -797,7 +797,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-//#define CUSTOM_MACHINE_NAME "3D Printer"
+#define CUSTOM_MACHINE_NAME "Joshua's CR-10S Pro V2"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -2544,7 +2544,7 @@
      #define NOZZLE_TO_PROBE_OFFSET { -44, -10, 0 }
    #endif
 #elif ANY(MachineCR10SPro, MachineCR10Max) && ENABLED(HotendStock) && DISABLED(MicroswissDirectDrive)
-  #define NOZZLE_TO_PROBE_OFFSET { -27, 0, 0 }
+  #define NOZZLE_TO_PROBE_OFFSET { -55, -13, 0 }
 #elif (ANY(ABL_BLTOUCH, ABL_EZABL,ABL_NCSW) && ENABLED(E3DHemera))
     #define NOZZLE_TO_PROBE_OFFSET { -40, 0, 0 }
 #elif ENABLED(MachineCR10SV2)
@@ -2592,7 +2592,7 @@
 #define XY_PROBE_FEEDRATE (200*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_FEEDRATE_FAST (12*60)
+#define Z_PROBE_FEEDRATE_FAST (10*60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
 #define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
@@ -3032,7 +3032,7 @@
     #define Y_BED_SIZE 300
     #define Z_MAX_POS 400
     #define X_MAX_POS 315
-    #define Y_MAX_POS 310
+    #define Y_MAX_POS 300
     #define ClipClearance 5
   #elif ENABLED(MachineCR10SPro)
     #define X_BED_SIZE 300
@@ -3104,7 +3104,7 @@
   #define Y_MIN_POS -5
 #else
   #define X_MIN_POS 0
-  #define Y_MIN_POS 0
+  #define Y_MIN_POS -9
 #endif
 #define Z_MIN_POS 0
 #ifndef X_MAX_POS
@@ -3689,14 +3689,14 @@
 // Preheat Constants - Up to 10 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 180
-#define PREHEAT_1_TEMP_BED     70
+#define PREHEAT_1_TEMP_HOTEND 200
+#define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_2_LABEL       "ABS"
-#define PREHEAT_2_TEMP_HOTEND 240
-#define PREHEAT_2_TEMP_BED    110
+#define PREHEAT_2_LABEL       "PETG"
+#define PREHEAT_2_TEMP_HOTEND 220
+#define PREHEAT_2_TEMP_BED    70
 #define PREHEAT_2_TEMP_CHAMBER 35
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
